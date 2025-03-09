@@ -86,14 +86,29 @@ character.traverse((mesh) => {
 });
 
 // 애니메이션 클립을 관리하는 믹서
+
+let currentActionIndex = 0;
+
 const mixer = new THREE.AnimationMixer(character);
+const playNextAction = () => {
+  const clip = animationClips[currentActionIndex];
+  const action = mixer.clipAction(clip);
+  action.setLoop(THREE.LoopOnce, 1);
+  
+  action.play();
+  
+};
 
-// 믹서에 animation 클립을 지정하고 재생
-const action = mixer.clipAction(animationClips[3]);
+mixer.addEventListener('finished', () => {
+  currentActionIndex = (currentActionIndex + 1) % animationClips.length;
+  playNextAction();
+});
 
-action.setLoop(THREE.LoopPingPong); // 처음 -> 끝 -> 처음 ... 무한 재생
+// Start the first action
+playNextAction();
 
-action.play();
+
+
 
 
 
