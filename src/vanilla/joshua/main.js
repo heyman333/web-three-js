@@ -173,4 +173,3 @@ const render = () => {
 };
 
 render();
-₩
