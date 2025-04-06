@@ -11,9 +11,12 @@
     "run-vanilla": "vite src/vanilla/main.js"
   },
   "dependencies": {
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "three": "^0.173.0"
+    "three": "^0.173.0",
+    "three-stdlib": "^2.35.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
