@@ -1,7 +1,36 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   padding: 0;
   margin: 0;
+}
+
+.canvas-container {
+  width: 100vw;
+  height: 100vh;
+
+  .playing-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: large;
+  }
+
+  .playing-count {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: large;
+  }
 }

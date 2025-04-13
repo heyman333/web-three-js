@@ -1,23 +1,18 @@
-import { useRef } from 'react';
-
 export const Lights = () => {
-  const lightRef = useRef(null);
-
   return (
     <>
-      <directionalLight
-        ref={lightRef}
-        args={[0xffffff, 5]}
-        position={[4, 4, 4]}
+      <ambientLight intensity={0.5 * Math.PI} />
+      <pointLight decay={0} intensity={Math.PI} position={[-10, -10, -10]} />
+      <spotLight
+        angle={0.3}
         castShadow
-        shadow-camera-left={-25}
-        shadow-camera-right={25}
-        shadow-camera-top={25}
-        shadow-camera-bottom={-25}
-        shadow-camera-near={0.1}
-        shadow-camera-far={1000}
-        shadow-mapSize-width={8192}
-        shadow-mapSize-height={8192}
+        decay={0}
+        intensity={Math.PI}
+        penumbra={1}
+        position={[0, 5, 20]}
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+        shadow-bias={-0.0001}
       />
     </>
   );
