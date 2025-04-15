@@ -21,7 +21,24 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        {
+          allowConstantExport: true,
+          allowDefaultExport: true,
+        },
+      ],
+      '@typescript-eslint/no-shadow': 'off',
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-use-before-define': 'off',
+      '@typescript-eslint/no-unnecessary-condition': 'off',
+      'import/no-unresolved': 'off',
+      'semi': 'off',
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          "ignoreRestSiblings": true,
+          "varsIgnorePattern": "^_",
+          "argsIgnorePattern": "^_"
+        }
       ],
     },
   },
