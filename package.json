@@ -12,13 +12,13 @@
   },
   "dependencies": {
     "@react-three/cannon": "^6.6.0",
-    "@react-three/drei": "^10.0.6",
+    "@react-three/drei": "^10.0.8",
     "@react-three/fiber": "^9.1.2",
     "@react-three/postprocessing": "^3.0.4",
+    "gsap": "^3.13.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "three": "^0.173.0",
-    "three-stdlib": "^2.35.15"
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
